@@ -178,7 +178,18 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen font-sans pb-12 relative overflow-x-hidden">
+    <div className="min-h-screen font-sans pb-12 relative overflow-x-hidden bg-black text-white">
+      {/* Background Image with Overlay */}
+      <div className="fixed inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop" 
+          alt="Christmas Party Background" 
+          className="w-full h-full object-cover opacity-60"
+        />
+        {/* Dark gradient overlay to ensure text readability against the busy photo */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/60"></div>
+      </div>
+
       <Snowfall />
       <ChristmasDecorations />
 
